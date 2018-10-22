@@ -11,8 +11,14 @@
 <body>
     
     <header>
-       <h1>Hej</h1>
+       <h1>Hello World!</h1>
     </header>
+
+    <form action="register.php" method="POST">
+     <input type="text" name="username">
+     <input type="text" name="password">
+     <input type="submit" value="Log in">
+    </form>
 
 </body>
 </html>
