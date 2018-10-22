@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 /*
 1. Koppla upp till databasen
 2. Hamta user fran databasen
@@ -43,7 +44,8 @@ if($is_password_correct) {
     // Save user globally to session
     $_SESSION["username"] = $fetched_user["username"];
 } else {
-
+    //Handle errors
+    
 }
 
 ?>
