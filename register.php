@@ -11,4 +11,18 @@ $pdo = new PDO(
     "root"
 );
 
+$username = $_POST["username"];
+$password = $_POST["password"];
+
+$statement = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
+//Execute populates the statement and runs it
+$statement->execute(
+    [
+        ":username" => $username,
+        ":password" => $password
+    ]
+);
+
+
+
 ?>
