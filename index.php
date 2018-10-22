@@ -17,7 +17,7 @@ session_start();
        <h1>Hej <?= $_SESSION["username"]; ?></h1>
     </header>
 
-    <h2>Login</h2>
+    <h2>Register</h2>
     <form action="register.php" method="POST">
     <label for="register_username">Username</label>
      <input type="text" name="username" id="register_username">
