@@ -13,6 +13,7 @@ $pdo = new PDO(
 
 $username = $_POST["username"];
 $password = $_POST["password"];
+
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 $statement = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
@@ -23,6 +24,9 @@ $statement->execute(
         ":password" => $hashed_password
     ]
 );
+
+
+header('Location: index.php');
 
 
 
