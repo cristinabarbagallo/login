@@ -13,13 +13,14 @@ $pdo = new PDO(
 
 $username = $_POST["username"];
 $password = $_POST["password"];
+$hashed_password = password_hash($password);
 
 $statement = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
 //Execute populates the statement and runs it
 $statement->execute(
     [
         ":username" => $username,
-        ":password" => $password
+        ":password" => $hashed_password
     ]
 );
 
