@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +14,7 @@
 <body>
     
     <header>
-       <h1>Hello World!</h1>
+       <h1>Hej <?= $_SESSION["username"]; ?></h1>
     </header>
 
     <h2>Login</h2>
@@ -27,6 +30,7 @@
      <input type="text" name="password">
      <input type="submit" value="Login">
     </form>
+    
 
 </body>
 </html>
